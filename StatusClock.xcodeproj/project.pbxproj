@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FB481B129B3B9D600DAEBF2 /* TimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB481B029B3B9D600DAEBF2 /* TimeCalculator.swift */; };
+		9FB481B329B3D90100DAEBF2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9FB481B229B3D90100DAEBF2 /* README.md */; };
 		9FE663ED29206A1D00551919 /* StatusClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE663EC29206A1D00551919 /* StatusClockApp.swift */; };
 		9FE663EF29206A1D00551919 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE663EE29206A1D00551919 /* ContentView.swift */; };
 		9FE663F129206A1E00551919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE663F029206A1E00551919 /* Assets.xcassets */; };
@@ -14,12 +16,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9FB481B029B3B9D600DAEBF2 /* TimeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculator.swift; sourceTree = "<group>"; };
+		9FB481B229B3D90100DAEBF2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9FE663E929206A1D00551919 /* StatusClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatusClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE663EC29206A1D00551919 /* StatusClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusClockApp.swift; sourceTree = "<group>"; };
 		9FE663EE29206A1D00551919 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9FE663F029206A1E00551919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FE663F329206A1E00551919 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FE663F529206A1E00551919 /* StatusClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StatusClock.entitlements; sourceTree = "<group>"; };
+		9FE663FD2921325F00551919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +41,7 @@
 		9FE663E029206A1D00551919 = {
 			isa = PBXGroup;
 			children = (
+				9FB481B229B3D90100DAEBF2 /* README.md */,
 				9FE663EB29206A1D00551919 /* StatusClock */,
 				9FE663EA29206A1D00551919 /* Products */,
 			);
@@ -52,7 +58,9 @@
 		9FE663EB29206A1D00551919 /* StatusClock */ = {
 			isa = PBXGroup;
 			children = (
+				9FE663FD2921325F00551919 /* Info.plist */,
 				9FE663EC29206A1D00551919 /* StatusClockApp.swift */,
+				9FB481B029B3B9D600DAEBF2 /* TimeCalculator.swift */,
 				9FE663EE29206A1D00551919 /* ContentView.swift */,
 				9FE663F029206A1E00551919 /* Assets.xcassets */,
 				9FE663F529206A1E00551919 /* StatusClock.entitlements */,
@@ -127,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB481B329B3D90100DAEBF2 /* README.md in Resources */,
 				9FE663F429206A1E00551919 /* Preview Assets.xcassets in Resources */,
 				9FE663F129206A1E00551919 /* Assets.xcassets in Resources */,
 			);
@@ -140,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FE663EF29206A1D00551919 /* ContentView.swift in Sources */,
+				9FB481B129B3B9D600DAEBF2 /* TimeCalculator.swift in Sources */,
 				9FE663ED29206A1D00551919 /* StatusClockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,19 +278,22 @@
 				CODE_SIGN_ENTITLEMENTS = StatusClock/StatusClock.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"StatusClock/Preview Content\"";
 				DEVELOPMENT_TEAM = 362TGD3M6V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StatusClock/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pulsely.StatusClock;
+				MARKETING_VERSION = 1.5.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pulsely.statusclock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -295,19 +308,22 @@
 				CODE_SIGN_ENTITLEMENTS = StatusClock/StatusClock.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"StatusClock/Preview Content\"";
 				DEVELOPMENT_TEAM = 362TGD3M6V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StatusClock/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pulsely.StatusClock;
+				MARKETING_VERSION = 1.5.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pulsely.statusclock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
