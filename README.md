@@ -12,6 +12,10 @@ While there is a new "MenuBarExtra" that can be used under SwiftUI, the variable
 
 ## Download Status Clock at Mac AppStore now
 
-* [Status Clock at Mac AppStore](https://apps.apple.com/us/app/status-clock/id552792489?mt=12)
+The Status Clock is signed with hardened runtime and available at Mac AppStore:
 
+- [Status Clock at Mac AppStore](https://apps.apple.com/us/app/status-clock/id552792489?mt=12)
 
+## Download Status Clock directly
+
+The Status Clock is signed with hardened runtime and available at Mac AppStore and available for download at the [releases](https://github.com/pulsely/status-clock-macos/releases) section.
