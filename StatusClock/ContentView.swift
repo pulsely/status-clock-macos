@@ -15,6 +15,7 @@ struct CustomizedMenuItem: View {
     @Binding var hoverTitle:String
     @State var title:String
     
+    
     var action: () -> Void
 
     var body: some View {
@@ -27,6 +28,7 @@ struct CustomizedMenuItem: View {
             
             HStack {
                 Text( title )
+                    .foregroundColor( title == "GMT / UTC" ? .accentColor : .primary)
                 
                 Spacer()
             }
@@ -74,8 +76,67 @@ struct ContentView: View {
 
     @State var hoverTitle = ""
     
-    var body: some View {
+    let columns = [
+        GridItem(.adaptive(minimum: 85))
+    ]
+    
+    var new_view : some View {
+        VStack {
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach (self.viewModel.array_values, id: \.self) { value in
+                    
+                    CustomizedMenuItem(hoverTitle: self.$hoverTitle, title: value) {
+                        self.viewModel.updateTimezone( value )
+                        
+                        NSApplication.shared.keyWindow?.close()
+                        
+                    }
+                    
+                }
+            }
+            
+            Divider()
+            
+            
+            if (self.viewModel.show_seconds) {
+                CustomizedMenuItem(hoverTitle: self.$hoverTitle, title:  "Hide seconds" ) {
+                    self.viewModel.show_seconds.toggle()
+                    NSApplication.shared.keyWindow?.close()
+
+                }
+            } else {
+                CustomizedMenuItem(hoverTitle: self.$hoverTitle, title: "Show seconds") {
+                    self.viewModel.show_seconds.toggle()
+                    NSApplication.shared.keyWindow?.close()
+
+                }
+            }
+
+            
+            Divider()
+            
+            CustomizedMenuItem(hoverTitle: self.$hoverTitle, title:  "About" ) {
+                self.viewModel.show_seconds.toggle()
+                if let url = URL(string: "https://www.pulsely.com") {
+                    NSWorkspace.shared.open(url)
+                }
+
+            }
+
+            Divider()
+            
+            CustomizedMenuItem(hoverTitle: self.$hoverTitle, title: "Quit") {
+                self.viewModel.show_seconds.toggle()
+                NSApplication.shared.terminate(nil)
+
+            }
+
+        }.frame(minWidth: 400).padding(5)
+    }
+    
+    var old_view : some View {
         VStack(alignment: .leading, spacing: 0) {
+           
             ForEach (self.viewModel.array_values, id: \.self) { value in
 
                 CustomizedMenuItem(hoverTitle: self.$hoverTitle, title: value) {
@@ -123,6 +184,11 @@ struct ContentView: View {
         }.frame(minWidth: 120.0)
 
         .padding()
+
+    }
+    
+    var body: some View {
+        new_view
     }
 }
 
