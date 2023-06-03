@@ -1,5 +1,7 @@
 # Status Clock for macOS
 
+![Status Clock for macOS Screenshot](https://pulsely.github.io/assets/images/StatusClock/status-clock-screenshot.jpg
+
 Status Clock shows an additional clock on your macOS status bar, with the time zone of your choice.
 
 You can enable and disable the seconds as necessary.
